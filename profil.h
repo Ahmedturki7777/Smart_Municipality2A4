@@ -1,10 +1,10 @@
 #ifndef PROFIL_H
 #define PROFIL_H
 #include<iostream>
-using namespace std;
 #include<QString>
 #include<QSqlQuery>
 #include<QSqlQueryModel>
+using namespace std;
 
 class Profil
     {private:
@@ -20,7 +20,8 @@ class Profil
         void setpassword(QString b){password=b;}
         QString getpassword(){return password;}
          bool ajouter();
-
+QSqlQueryModel * afficher();
+ bool supprimer(QString login);
 
 };
 

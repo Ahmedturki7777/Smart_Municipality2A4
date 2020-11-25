@@ -25,12 +25,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+    employe.cpp \
         main.cpp \
         mainwindow.cpp \
     connection.cpp \
     profil.cpp
 
 HEADERS += \
+    employe.h \
         mainwindow.h \
     connection.h \
     profil.h
