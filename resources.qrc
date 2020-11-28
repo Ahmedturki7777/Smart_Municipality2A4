@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>res/apple.png</file>
+        <file>res/bently.png</file>
+        <file>res/steve.png</file>
+        <file>res/téléchargement (1).jpg</file>
+        <file>res/téléchargement.jpg</file>
+    </qresource>
+</RCC>
