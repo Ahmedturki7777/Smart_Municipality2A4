@@ -2863,7 +2863,7 @@
        <widget class="QLineEdit" name="rcpt">
         <property name="geometry">
          <rect>
-          <x>100</x>
+          <x>170</x>
           <y>40</y>
           <width>491</width>
           <height>21</height>
@@ -2876,7 +2876,7 @@
        <widget class="QLineEdit" name="subject">
         <property name="geometry">
          <rect>
-          <x>100</x>
+          <x>170</x>
           <y>90</y>
           <width>651</width>
           <height>16</height>
@@ -2889,7 +2889,7 @@
        <widget class="QLineEdit" name="mail_pass">
         <property name="geometry">
          <rect>
-          <x>620</x>
+          <x>680</x>
           <y>40</y>
           <width>141</width>
           <height>20</height>
@@ -2905,7 +2905,7 @@
        <widget class="QLineEdit" name="file">
         <property name="geometry">
          <rect>
-          <x>100</x>
+          <x>170</x>
           <y>130</y>
           <width>571</width>
           <height>23</height>
@@ -2918,8 +2918,8 @@
        <widget class="QTextEdit" name="msg">
         <property name="geometry">
          <rect>
-          <x>100</x>
-          <y>180</y>
+          <x>170</x>
+          <y>190</y>
           <width>651</width>
           <height>291</height>
          </rect>
@@ -2931,7 +2931,7 @@
        <widget class="QPushButton" name="browseBtn">
         <property name="geometry">
          <rect>
-          <x>720</x>
+          <x>750</x>
           <y>130</y>
           <width>75</width>
           <height>24</height>
@@ -2944,14 +2944,79 @@
        <widget class="QPushButton" name="sendBtn">
         <property name="geometry">
          <rect>
-          <x>100</x>
-          <y>480</y>
+          <x>170</x>
+          <y>490</y>
           <width>651</width>
           <height>23</height>
          </rect>
         </property>
         <property name="text">
          <string>Send</string>
+        </property>
+       </widget>
+       <widget class="Line" name="line_105">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>30</y>
+          <width>20</width>
+          <height>491</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+       </widget>
+       <widget class="Line" name="line_106">
+        <property name="geometry">
+         <rect>
+          <x>140</x>
+          <y>540</y>
+          <width>681</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+       <widget class="Line" name="line_107">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>10</y>
+          <width>771</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+       <widget class="Line" name="line_108">
+        <property name="geometry">
+         <rect>
+          <x>850</x>
+          <y>30</y>
+          <width>20</width>
+          <height>501</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_36">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>-10</y>
+          <width>1101</width>
+          <height>661</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
         </property>
        </widget>
       </widget>
