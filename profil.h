@@ -22,6 +22,8 @@ class Profil
          bool ajouter();
 QSqlQueryModel * afficher();
  bool supprimer(QString login);
+  bool modifierp(QString log);
+
 
 };
 

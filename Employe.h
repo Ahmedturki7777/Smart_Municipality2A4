@@ -2,7 +2,9 @@
 #define EMPLOYE_H
 #include<QString>
 #include<QSqlQueryModel>
-
+#include<QSqlQuery>
+#include<iostream>
+using namespace std;
 class Employe
 {private:
     QString nom,prenom,cin,date_de_naissance,lieu_de_naissance,nationalite;
@@ -24,7 +26,11 @@ public:
     QString getnationalite(){return nationalite;}
     bool ajouter() ;
     QSqlQueryModel *afficher() ;
-    bool supprimer(QString login);
+    bool supprimer(QString nom);
+QSqlQueryModel *rechercher(QString name);
+QSqlQueryModel *rechercher_s(QString surname);
+QSqlQueryModel *rechercher_c(QString id);
+bool modifiere(QString nm);
 };
 
 #endif // EMPLOYE_H
