@@ -27,7 +27,7 @@
      <bool>true</bool>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="License">
      <attribute name="title">
@@ -398,53 +398,53 @@
          </rect>
         </property>
         <property name="text">
-         <string>De:</string>
+         <string>Sujet:</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_10">
+       <widget class="QLabel" name="Attachement">
         <property name="geometry">
          <rect>
           <x>20</x>
           <y>80</y>
-          <width>31</width>
+          <width>71</width>
           <height>16</height>
          </rect>
         </property>
         <property name="text">
-         <string>Objet:</string>
+         <string>Attachement:</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_a">
+       <widget class="QLineEdit" name="rcpt">
         <property name="geometry">
          <rect>
           <x>60</x>
           <y>20</y>
-          <width>501</width>
+          <width>371</width>
           <height>21</height>
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_de">
+       <widget class="QLineEdit" name="subject">
         <property name="geometry">
          <rect>
           <x>60</x>
           <y>50</y>
-          <width>501</width>
+          <width>371</width>
           <height>21</height>
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit_obj">
+       <widget class="QLineEdit" name="file">
         <property name="geometry">
          <rect>
-          <x>60</x>
+          <x>90</x>
           <y>80</y>
-          <width>501</width>
+          <width>421</width>
           <height>21</height>
          </rect>
         </property>
        </widget>
-       <widget class="QTextEdit" name="textEdit_mail">
+       <widget class="QTextEdit" name="msg">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -454,7 +454,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_4">
+       <widget class="QPushButton" name="sendBtn">
         <property name="geometry">
          <rect>
           <x>470</x>
@@ -465,6 +465,45 @@
         </property>
         <property name="text">
          <string>Envoyer</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="mail_pass">
+        <property name="geometry">
+         <rect>
+          <x>560</x>
+          <y>20</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::Password</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_24">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>20</y>
+          <width>101</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Votre mot de passe:</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="browseBtn">
+        <property name="geometry">
+         <rect>
+          <x>550</x>
+          <y>80</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Parcour...</string>
         </property>
        </widget>
       </widget>
@@ -487,7 +526,7 @@
        <bool>true</bool>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="Afficher_2">
        <property name="autoFillBackground">
@@ -899,7 +938,7 @@
          </rect>
         </property>
         <property name="text">
-         <string>Evoyer</string>
+         <string>Envoyer</string>
         </property>
        </widget>
       </widget>

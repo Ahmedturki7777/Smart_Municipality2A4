@@ -4,6 +4,9 @@
 #include <QMainWindow>
 #include "license.h"
 #include "projet.h"
+#include "envoi_mail.h"
+#include <QDialog>
+#include <QFileDialog>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -16,7 +19,6 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 private slots:
-    void on_pushButton_clicked();
 
 
     void on_pushButton_sup_clicked();
@@ -38,12 +40,19 @@ private slots:
     void on_pushButton_rec_2_clicked();
 
     void on_pushButton_mod_3_clicked();
+    void sendMail();
+    void mailSent(QString);
+    void browse();
 
+
+    void on_pushButton_quit_clicked();
 
 private:
     Ui::MainWindow *ui;
     tables e;
     Projet p;
+    QStringList files;
+
 
 };
 #endif // MAINWINDOW_H

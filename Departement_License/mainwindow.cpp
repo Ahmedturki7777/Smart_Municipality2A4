@@ -35,12 +35,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->pushButton_mod_3->setStyleSheet("border-image: url(:/new/prefix1/Resources/button_init.png)3 10 3 10; font: 24pt Bahnschrift;");
     ui->pushButton_Ajouter_2->setStyleSheet("border-image: url(:/new/prefix1/Resources/button_init.png)3 10 3 10; font: 24pt Bahnschrift;");
     ui->pushButton_3->setStyleSheet("border-image: url(:/new/prefix1/Resources/button_init.png)3 10 3 10; font: 24pt Bahnschrift;");
-    ui->pushButton_4->setStyleSheet("border-image: url(:/new/prefix1/Resources/button_init.png)3 10 3 10; font: 24pt Bahnschrift;");
-
-
-
-
-
+    ui->sendBtn->setStyleSheet("border-image: url(:/new/prefix1/Resources/button_init.png)3 10 3 10; font: 24pt Bahnschrift;");
 
 
     ui->lineEdit_CIN->setValidator(new QIntValidator(0,999999999));
@@ -51,7 +46,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->lineEdit_Pr_2->setValidator(new QRegExpValidator(QRegExp("[A-Za-z_ ]{0,20}"),this));
 
 
-
+    connect(ui->sendBtn, SIGNAL(clicked()),this, SLOT(sendMail()));
+    connect(ui->browseBtn, SIGNAL(clicked()), this, SLOT(browse()));
 
 }
 
@@ -61,10 +57,6 @@ MainWindow::~MainWindow()
 }
 
 
-void MainWindow::on_pushButton_clicked()
-{
-    close();
-}
 
 void MainWindow::on_pushButton_Ajouter_clicked()
 {
@@ -310,3 +302,48 @@ void MainWindow::on_pushButton_mod_3_clicked()
 
 }
 
+void  MainWindow::browse()
+{
+    files.clear();
+
+    QFileDialog dialog(this);
+    dialog.setDirectory(QDir::homePath());
+    dialog.setFileMode(QFileDialog::ExistingFiles);
+
+    if (dialog.exec())
+        files = dialog.selectedFiles();
+
+    QString fileListString;
+    foreach(QString file, files)
+        fileListString.append( "\"" + QFileInfo(file).fileName() + "\" " );
+
+    ui->file->setText( fileListString );
+
+}
+
+void   MainWindow::sendMail()
+{
+    Smtp* smtp = new Smtp("hassen.ba.1997@gmail.com",ui->mail_pass->text(), "smtp.gmail.com");
+    connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
+
+    if( !files.isEmpty() )
+        smtp->sendMail("hassen.ba.1997@gmail.com", ui->rcpt->text() , ui->subject->text(),ui->msg->toPlainText(), files );
+    else
+        smtp->sendMail("hassen.ba.1997@gmail.com", ui->rcpt->text() , ui->subject->text(),ui->msg->toPlainText());
+}
+void   MainWindow::mailSent(QString status)
+{
+
+    if(status == "Message sent")
+        QMessageBox::warning( nullptr, tr( "Qt Simple SMTP client" ), tr( "Message sent!\n\n" ) );
+    ui->rcpt->clear();
+    ui->subject->clear();
+    ui->file->clear();
+    ui->msg->clear();
+    ui->mail_pass->clear();
+}
+
+void MainWindow::on_pushButton_quit_clicked()
+{
+    close();
+}
