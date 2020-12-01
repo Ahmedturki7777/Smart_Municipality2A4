@@ -5,6 +5,9 @@
 #include <QPrinter>
 #include <QPdfWriter>
 #include <QPainter>
+#include "ui_mainwindow.h"
+#include <QSqlQuery>
+#include <QSqlQueryModel>
 
 class impression
 {

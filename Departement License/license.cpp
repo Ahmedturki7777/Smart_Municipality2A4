@@ -1,11 +1,11 @@
 #include "license.h"
 
-tables::tables(QString nom,QString prenom ,QString nomlicense,QString email, int cin)
+tables::tables(QString nom,QString prenom ,QString nomlicense,QString email, QString cin)
 
 {
     this->nom=nom;
     this->prenom=prenom;
-    CIN=cin;
+    this->CIN=cin;
     this->nomlicense=nomlicense;
     this->email=email;
 }
@@ -36,24 +36,20 @@ QSqlQueryModel * tables::afficher()
     return model;
 
 }
-bool tables::supprimer(int cin)
+bool tables::supprimer(QString cin)
 {
     QSqlQuery query;
-    QString res=QString::number(cin);
+    QString res=cin;
     query.prepare("DELETE FROM CLIENT WHERE CIN= :cin");
     query.bindValue(":cin", res);
     return query.exec();
 }
 
-bool tables::modifier()
+bool tables::modifier(QString nom,QString prenom ,QString nomlicense ,QString email ,QString cinn)
 {
     QSqlQuery query;
-    query.prepare("UPDATE CLIENT SET nom:=nom, prenom:=prenom, nomlicense:nomlicense, email:email WHERE CIN= :cin");
-    query.bindValue(":cin", CIN);
-    query.bindValue(":nom", nom);
-    query.bindValue(":prenom", prenom);
-    query.bindValue(":nomlicense", nomlicense);
-    query.bindValue(":email", email);
+    query.prepare("UPDATE CLIENT SET nom='"+nom+"', prenom='"+prenom+"', nomlicense='"+nomlicense+"', email='"+email+"' WHERE CIN= '"+cinn+"' ");
+
 
     return query.exec();
 }

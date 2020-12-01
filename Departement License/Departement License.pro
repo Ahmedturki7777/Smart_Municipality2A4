@@ -10,16 +10,20 @@ CONFIG += c++11
 
 SOURCES += \
     connection.cpp \
+    envoi_mail.cpp \
     impression.cpp \
     license.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    projet.cpp
 
 HEADERS += \
     connection.h \
+    envoi_mail.h \
     impression.h \
     license.h \
-    mainwindow.h
+    mainwindow.h \
+    projet.h
 
 FORMS += \
     mainwindow.ui

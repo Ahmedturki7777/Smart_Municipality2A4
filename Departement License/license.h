@@ -5,29 +5,29 @@
 #include <QSqlQueryModel>
 class tables
 {
-    QString nom,prenom,nomlicense,email;
-    int CIN;
+    QString nom,prenom,nomlicense,email,CIN;
 public:
     tables(){};
-    tables(QString,QString,QString,QString,int);
+    tables(QString,QString,QString,QString,QString);
     QString getNom(){return nom;}
     QString getPrenom(){return prenom;}
     QString getNomLicense(){return nomlicense;}
     QString getEmail(){return email;}
-    int getCIN(){return CIN;}
+    QString getCIN(){return CIN;}
 
 
     void setNom(QString nm){nom=nm;}
     void setPrenom(QString pr){prenom=pr;}
     void setNomLicense(QString nl){nomlicense=nl;}
     void setEmail(QString mail){mail=email;}
-    void setCIN(int cin){CIN=cin;}
+    void setCIN(QString cin){CIN=cin;}
 
 
     bool ajouter();
     QSqlQueryModel * afficher();
-    bool supprimer(int);
-    bool modifier();
+    bool supprimer(QString);
+    bool modifier(QString,QString,QString,QString,QString);
+    ~tables(){}
 
 };
 
