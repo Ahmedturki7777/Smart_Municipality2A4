@@ -45,6 +45,10 @@ MainWindow::MainWindow(QWidget *parent)
     ui->lineEdit_Nom_2->setValidator(new QRegExpValidator(QRegExp("[A-Za-z_ ]{0,20}"),this));
     ui->lineEdit_Pr_2->setValidator(new QRegExpValidator(QRegExp("[A-Za-z_ ]{0,20}"),this));
 
+    QRegularExpression rx("\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}\\b",
+                              QRegularExpression::CaseInsensitiveOption);
+        ui->lineEdit_mail->setValidator(new QRegularExpressionValidator(rx, this));
+
 
     connect(ui->sendBtn, SIGNAL(clicked()),this, SLOT(sendMail()));
     connect(ui->browseBtn, SIGNAL(clicked()), this, SLOT(browse()));
@@ -287,7 +291,7 @@ void MainWindow::on_pushButton_mod_3_clicked()
     }
     if(test)
     {
-        ui->tableView->setModel(p.afficher());
+        ui->tableView_2->setModel(p.afficher());
 
         QMessageBox::information(nullptr, QObject::tr("Modification effectue"),
                     QObject::tr("OK.\n"

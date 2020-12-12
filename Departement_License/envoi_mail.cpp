@@ -13,7 +13,6 @@ Smtp::Smtp( const QString &user, const QString &pass, const QString &host, int p
 
     this->user = user;
     this->pass = pass;
-
     this->host = host;
     this->port = port;
     this->timeout = timeout;
