@@ -27,7 +27,6 @@ impression::impression(QString filename)
     sender += "Adress\n";
     QString data = "Donner ici"; 
 
-
     painter.drawText(r, Qt::AlignLeft, sender);
     painter.drawText(1000, 1000, data);
 

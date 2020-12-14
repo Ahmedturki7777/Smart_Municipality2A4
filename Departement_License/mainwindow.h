@@ -7,6 +7,8 @@
 #include "envoi_mail.h"
 #include <QDialog>
 #include <QFileDialog>
+#include "exportexcelobject.h"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -46,6 +48,9 @@ private slots:
 
 
     void on_pushButton_quit_clicked();
+
+
+    void on_export_excel_clicked();
 
 private:
     Ui::MainWindow *ui;

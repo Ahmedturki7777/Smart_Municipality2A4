@@ -11,6 +11,7 @@ CONFIG += c++11
 SOURCES += \
     connection.cpp \
     envoi_mail.cpp \
+    exportexcelobject.cpp \
     impression.cpp \
     license.cpp \
     main.cpp \
@@ -20,6 +21,7 @@ SOURCES += \
 HEADERS += \
     connection.h \
     envoi_mail.h \
+    exportexcelobject.h \
     impression.h \
     license.h \
     mainwindow.h \

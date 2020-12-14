@@ -159,7 +159,7 @@ void MainWindow::on_pushButton_rec_clicked()
     QSqlQueryModel *model = new QSqlQueryModel();
     QString cod;
     cod = ui->lineEdit_CINrec->text();
-    model->setQuery("Select * from CLIENT where CIN = '"+cod+"' ");
+    model->setQuery("Select * from LICENSE where CIN = '"+cod+"' ");
     model->setHeaderData(0,Qt::Horizontal,QObject::tr("cin"));
     model->setHeaderData(1,Qt::Horizontal,QObject::tr("nom"));
     model->setHeaderData(2,Qt::Horizontal,QObject::tr("prenom"));
@@ -171,7 +171,7 @@ void MainWindow::on_pushButton_rec_clicked()
     msgBox.exec();
     ui->lineEdit_CINrec->clear();
     QSqlQuery qry;
-    qry.prepare("select * from CLIENT where CIN='"+cod+"'  " );
+    qry.prepare("select * from LICENSE where CIN='"+cod+"'  " );
     if(qry.exec())
     {
         while(qry.next())
@@ -350,4 +350,32 @@ void   MainWindow::mailSent(QString status)
 void MainWindow::on_pushButton_quit_clicked()
 {
     close();
+}
+
+
+
+void MainWindow::on_export_excel_clicked()
+{
+    QString fileName = QFileDialog::getSaveFileName(this, tr("Excel file"), qApp->applicationDirPath (),
+                                                    tr("Excel Files (*.xls)"));
+    if (fileName.isEmpty())
+        return;
+
+    ExportExcelObject obj(fileName, "license", ui->tableView);
+
+    //colums to export
+    obj.addField(0, "CIN", "char(20)");
+    obj.addField(1, "nom", "char(20)");
+    obj.addField(2, "prenom", "char(20)");
+    obj.addField(3, "nomduprojet", "char(20)");
+    obj.addField(4, "email", "char(20)");
+
+
+    int retVal = obj.export2Excel();
+    if( retVal > 0)
+    {
+        QMessageBox::information(this, tr("Done"),
+                                 QString(tr("%1 records exported!")).arg(retVal)
+                                 );
+    }
 }

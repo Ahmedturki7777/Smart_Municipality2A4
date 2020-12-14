@@ -13,7 +13,7 @@ bool tables::ajouter()
 {
     QSqlQuery query;
 
-    query.prepare("INSERT INTO CLIENT (cin, nom, prenom, nomlicense, email) "
+    query.prepare("INSERT INTO LICENSE (cin, nom, prenom, nomlicense, email) "
                   "VALUES (:cin, :nom, :prenom, :nomlicense, :email)");
     query.bindValue(":cin", CIN);
     query.bindValue(":nom", nom);
@@ -25,7 +25,7 @@ bool tables::ajouter()
 QSqlQueryModel * tables::afficher()
 {
     QSqlQueryModel * model = new QSqlQueryModel();
-    model->setQuery("select * from CLIENT");
+    model->setQuery("select * from LICENSE");
     model->setHeaderData(0,Qt::Horizontal,QObject::tr("cin"));
     model->setHeaderData(1,Qt::Horizontal,QObject::tr("nom"));
     model->setHeaderData(2,Qt::Horizontal,QObject::tr("prenom"));
@@ -40,7 +40,7 @@ bool tables::supprimer(QString cin)
 {
     QSqlQuery query;
     QString res=cin;
-    query.prepare("DELETE FROM CLIENT WHERE CIN= :cin");
+    query.prepare("DELETE FROM LICENSE WHERE CIN= :cin");
     query.bindValue(":cin", res);
     return query.exec();
 }
@@ -48,7 +48,7 @@ bool tables::supprimer(QString cin)
 bool tables::modifier(QString nom,QString prenom ,QString nomlicense ,QString email ,QString cinn)
 {
     QSqlQuery query;
-    query.prepare("UPDATE CLIENT SET nom='"+nom+"', prenom='"+prenom+"', nomlicense='"+nomlicense+"', email='"+email+"' WHERE CIN= '"+cinn+"' ");
+    query.prepare("UPDATE LICENSE SET nom='"+nom+"', prenom='"+prenom+"', nomlicense='"+nomlicense+"', email='"+email+"' WHERE CIN= '"+cinn+"' ");
 
 
     return query.exec();

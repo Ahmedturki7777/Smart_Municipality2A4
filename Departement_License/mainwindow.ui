@@ -46,7 +46,7 @@
        <bool>true</bool>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="Afficher">
        <property name="autoFillBackground">
@@ -204,6 +204,19 @@
           <string>Enter CIN du profil a imprimer:</string>
          </property>
         </widget>
+       </widget>
+       <widget class="QPushButton" name="export_excel">
+        <property name="geometry">
+         <rect>
+          <x>410</x>
+          <y>350</y>
+          <width>91</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Export excel</string>
+        </property>
        </widget>
       </widget>
       <widget class="QWidget" name="Ajouter">
