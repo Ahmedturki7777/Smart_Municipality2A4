@@ -3,7 +3,7 @@
 
 #include <QDialog>
 #include "pointage.h"
-#include "arduino.h"
+#include "rfid.h"
 namespace Ui {
 class button_pointage;
 }
