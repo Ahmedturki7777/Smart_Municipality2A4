@@ -30,8 +30,9 @@ bool bouton_employe::on_ajoutereButton_clicked()
     QString date_de_naissance =ui->lineEdit_dn->text();
     QString  lieu_de_naissance= ui->lineEdit_ln->text();
     QString nationalite =ui->lineEdit_nationalite->text();
+     QString rfid =ui->lineEdit_rfid->text();
 
-   employe k(nom,prenom,cin,date_de_naissance,lieu_de_naissance,nationalite);
+   employe k(nom,prenom,cin,date_de_naissance,lieu_de_naissance,nationalite,rfid);
      bool test=k.ajouter();
      if(test)
     { ui->tableView2->setModel(Etmp.afficher());
@@ -82,8 +83,9 @@ void bouton_employe::on_modifemployeButton_clicked()
     QString date_de_naissance =ui->modifier_dn->text();
     QString  lieu_de_naissance= ui->modifier_ln->text();
     QString nationalite =ui->modifier_nationalite->text();
+    QString rfid =ui->modifier_rfid->text();
 
-    employe b(nom,prenom,cin,date_de_naissance,lieu_de_naissance,nationalite);
+    employe b(nom,prenom,cin,date_de_naissance,lieu_de_naissance,nationalite,rfid);
 
             bool test=b.modifiere(nom);
             if(test)

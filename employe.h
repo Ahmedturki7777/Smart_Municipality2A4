@@ -13,10 +13,10 @@
 using namespace std;
 class employe
 {private:
-    QString nom,prenom,cin,date_de_naissance,lieu_de_naissance,nationalite;
+    QString nom,prenom,cin,date_de_naissance,lieu_de_naissance,nationalite,rfid;
 public:
     employe();
-    employe(QString,QString,QString,QString,QString,QString);
+    employe(QString,QString,QString,QString,QString,QString,QString);
     void setnom(QString b){nom=b;}
     QString getnom(){return nom;}
     void setprenom(QString a){prenom=a;}
@@ -30,6 +30,8 @@ public:
     QString getlieu_de_naissance(){return lieu_de_naissance;}
     void setnationalite(QString c){nationalite=c;}
     QString getnationalite(){return nationalite;}
+    void setrfid(QString c){rfid=c;}
+    QString getrfid(){return rfid;}
     bool ajouter() ;
     QSqlQueryModel *afficher() ;
     bool supprimer(QString nom);

@@ -7,7 +7,7 @@ employe::employe()
 {
 
 }
-employe::employe(QString a,QString b,QString c,QString d,QString e,QString f)
+employe::employe(QString a,QString b,QString c,QString d,QString e,QString f,QString g)
 {
  this->nom=a;
  this->prenom=b;
@@ -15,10 +15,11 @@ employe::employe(QString a,QString b,QString c,QString d,QString e,QString f)
  this->date_de_naissance=d;
  this->lieu_de_naissance=e;
  this->nationalite=f;
+ this->rfid=g;
 }
 bool employe::ajouter()
 { QSqlQuery query;
-    query.prepare("INSERT INTO tablee (nom,prenom,cin,date_de_naissance,lieu_de_naissance,nationalite) VALUES (:nom, :prenom,:cin,:date_de_naissance,:lieu_de_naissance,:nationalite)");
+    query.prepare("INSERT INTO tablee (nom,prenom,cin,date_de_naissance,lieu_de_naissance,nationalite,rfid) VALUES (:nom, :prenom,:cin,:date_de_naissance,:lieu_de_naissance,:nationalite,:rfid)");
 
     query.bindValue(":nom",nom);
     query.bindValue(":prenom", prenom);
@@ -26,6 +27,7 @@ bool employe::ajouter()
     query.bindValue(":date_de_naissance", date_de_naissance);
     query.bindValue(":lieu_de_naissance",lieu_de_naissance);
     query.bindValue(":nationalite", nationalite);
+     query.bindValue(":rfid",rfid);
     query.exec();
 
 }
@@ -38,7 +40,8 @@ model->setHeaderData(1,Qt::Horizontal,QObject::tr("prenom")) ;
 model->setHeaderData(2,Qt::Horizontal,QObject::tr("cin")) ;
 model->setHeaderData(3,Qt::Horizontal,QObject::tr("date_de_naissance")) ;
 model->setHeaderData(4,Qt::Horizontal,QObject::tr("lieu_de_naissance")) ;
-model->setHeaderData(5,Qt::Horizontal,QObject::tr("nationalite")) ;
+model->setHeaderData(5,Qt::Horizontal,QObject::tr("nationalite"));
+model->setHeaderData(6,Qt::Horizontal,QObject::tr("rfid")) ;
 return model;
 }
 bool employe::supprimer(QString nom)
@@ -109,17 +112,17 @@ bool employe::modifiere(QString nm)
 {
     QSqlQuery  query;
 
-     query.prepare("update tablee set nom = :nm,prenom =:prenom,cin=:cin,date_de_naissance=:date_de_naissance,lieu_de_naissance=:lieu_de_naissance,nationalite=:nationalite where nom = :nm") ;
+     query.prepare("update tablee set nom = :nm,prenom =:prenom,cin=:cin,date_de_naissance=:date_de_naissance,lieu_de_naissance=:lieu_de_naissance,nationalite=:nationalite,rfid=:rfid where nom = :nm") ;
      query.bindValue(":nm",nm);
      query.bindValue(":prenom",prenom);
      query.bindValue(":cin",cin);
      query.bindValue(":date_de_naissance",date_de_naissance);
      query.bindValue(":lieu_de_naissance",lieu_de_naissance);
      query.bindValue(":nationalite",nationalite);
+      query.bindValue(":rfid",rfid);
 
 
       query.exec();
 }
-
 
 
