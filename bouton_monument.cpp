@@ -1,6 +1,8 @@
+
 #include "bouton_monument.h"
 #include "ui_bouton_monument.h"
 #include "fenetre2.h"
+//ahmed turki
 
 
 bouton_monument::bouton_monument(QWidget *parent) :
