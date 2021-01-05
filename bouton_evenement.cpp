@@ -2,6 +2,7 @@
 #include "ui_bouton_evenement.h"
 #include "evenement.h"
 #include "QMessageBox"
+#include <QDebug>
 
 //test
 bouton_evenement::bouton_evenement(QWidget *parent) :
@@ -16,10 +17,36 @@ bouton_evenement::bouton_evenement(QWidget *parent) :
         int w3 = ui->label->width();
         int h3 = ui->label->height();
         ui->label->setPixmap(pix3.scaled(w3,h3,Qt::IgnoreAspectRatio));
+        int ret=A.connect_arduino();
+            switch(ret){
+            case(0):qDebug()<< "arduino is availble and connected to :"<< A.getarduino_port_name();
+                break;
+            case(1):qDebug()<< "arduino is availble but not connected to :"<< A.getarduino_port_name();
+                break;
+            case(-1):qDebug()<< "arduino is not availble";
+            }
+            QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label()));
 
+}
+void bouton_evenement::update_label()
+{
+    data=A.read_from_arduino();
+    QString DataAsString = QString(data);
+   qDebug()<< data;
+    if(data=="1"){
+        check=!check;
+    }
 
-
-
+    if(check==false){
+        ui->label_arduino->setText("empty");
+    }else if (check==true){
+        ui->label_arduino->setText("full");
+    }
+    if(data=="1"){
+        A.write_to_arduino("1");
+    }else{
+        A.write_to_arduino("0");
+    }
 }
 
 bouton_evenement::~bouton_evenement()

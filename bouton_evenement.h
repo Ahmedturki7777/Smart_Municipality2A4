@@ -1,6 +1,6 @@
 #ifndef BOUTON_EVENEMENT_H
 #define BOUTON_EVENEMENT_H
-
+#include "arduino.h"
 #include <QDialog>
 #include <evenement.h>
 //test
@@ -35,10 +35,14 @@ private slots:
     void on_pushButton_3_clicked();
 
     void on_pushButton_modifierev_2_clicked();
+    void update_label();
 
 private:
     Ui::bouton_evenement *ui;
     Evenement E;
+    arduino A;
+     bool check;
+     QByteArray data;
 };
 
 #endif // BOUTON_EVENEMENT_H

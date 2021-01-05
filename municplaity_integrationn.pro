@@ -10,6 +10,7 @@ CONFIG += c++11
 
 SOURCES += \
     amenagement.cpp \
+    arduino.cpp \
     bouton_employe.cpp \
     bouton_espace.cpp \
     bouton_evenement.cpp \
@@ -42,6 +43,7 @@ SOURCES += \
 
 HEADERS += \
     amenagement.h \
+    arduino.h \
     bouton_employe.h \
     bouton_espace.h \
     bouton_evenement.h \
