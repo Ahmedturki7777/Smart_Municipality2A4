@@ -10,7 +10,6 @@ CONFIG += c++11
 
 SOURCES += \
     amenagement.cpp \
-    arduino.cpp \
     bouton_employe.cpp \
     bouton_espace.cpp \
     bouton_evenement.cpp \
@@ -38,11 +37,11 @@ SOURCES += \
     profil.cpp \
     projet.cpp \
     projet_button.cpp \
-    reclamation.cpp
+    reclamation.cpp \
+    rfid.cpp
 
 HEADERS += \
     amenagement.h \
-    arduino.h \
     bouton_employe.h \
     bouton_espace.h \
     bouton_evenement.h \
@@ -69,7 +68,8 @@ HEADERS += \
     profil.h \
     projet.h \
     projet_button.h \
-    reclamation.h
+    reclamation.h \
+    rfid.h
 
 FORMS += \
     amenagement.ui \
