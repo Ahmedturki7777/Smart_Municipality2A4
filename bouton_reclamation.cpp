@@ -11,6 +11,10 @@ bouton_reclamation::bouton_reclamation(QWidget *parent) :
     ui->tableView_9->setModel(R.afficher());
 
     ui->tableView_10->setModel(R.afficher());
+    QPixmap pix3("C:/Users/ASUS/Desktop/Mohamed slama/Ressource/ssaa.jpg");
+        int w3 = ui->label->width();
+        int h3 = ui->label->height();
+        ui->label->setPixmap(pix3.scaled(w3,h3,Qt::IgnoreAspectRatio));
 }
 
 bouton_reclamation::~bouton_reclamation()

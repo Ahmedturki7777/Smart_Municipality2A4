@@ -16,10 +16,10 @@
   <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>30</y>
-     <width>631</width>
-     <height>411</height>
+     <x>-10</x>
+     <y>0</y>
+     <width>721</width>
+     <height>441</height>
     </rect>
    </property>
    <property name="currentIndex">
@@ -197,6 +197,32 @@
       <string>Date</string>
      </property>
     </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>6</x>
+       <y>-8</y>
+       <width>721</width>
+       <height>421</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+    <zorder>label</zorder>
+    <zorder>ajouter_2</zorder>
+    <zorder>modifer_2</zorder>
+    <zorder>supprimer_2</zorder>
+    <zorder>metier</zorder>
+    <zorder>quitter</zorder>
+    <zorder>dateEdit</zorder>
+    <zorder>doubleSpinBox</zorder>
+    <zorder>spinBox</zorder>
+    <zorder>tableView</zorder>
+    <zorder>label_3</zorder>
+    <zorder>label_4</zorder>
+    <zorder>label_5</zorder>
    </widget>
   </widget>
  </widget>

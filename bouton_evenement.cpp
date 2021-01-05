@@ -12,7 +12,10 @@ bouton_evenement::bouton_evenement(QWidget *parent) :
      ui->tableView_2->setModel(E.afficher());
      ui->tableView_3->setModel((E.afficher()));
     ui->tableView_4->setModel((E.afficher()));
-
+    QPixmap pix3("C:/Users/ASUS/Desktop/Mohamed slama/Ressource/ssaa.jpg");
+        int w3 = ui->label->width();
+        int h3 = ui->label->height();
+        ui->label->setPixmap(pix3.scaled(w3,h3,Qt::IgnoreAspectRatio));
 
 
 

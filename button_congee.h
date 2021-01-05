@@ -4,6 +4,7 @@
 #include <QDialog>
 #include "congee.h"
 #include "envoi_mail.h"
+#include <QFileDialog>
 
 namespace Ui {
 class button_congee;

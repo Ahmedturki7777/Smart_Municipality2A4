@@ -25,6 +25,17 @@ button_pointage::button_pointage(QWidget *parent) :
      case(-1) : qDebug ()<<"arduino is not available" ;
 
     }
+    QPixmap pix("C:/Users/ASUS/Desktop/Mohamed slama/Ressource/ssaa.jpg");
+        int w = ui->label_5->width();
+        int h = ui->label_5->height();
+        ui->label_5->setPixmap(pix.scaled(w,h,Qt::IgnoreAspectRatio));
+
+
+        QPixmap pix1("C:/Users/ASUS/Desktop/Mohamed slama/Ressource/ssaa.jpg");
+            int w1 = ui->label_22->width();
+            int h1 = ui->label_22->height();
+            ui->label_22->setPixmap(pix.scaled(w1,h1,Qt::IgnoreAspectRatio));
+
 
     QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(pointer()));
 
@@ -35,6 +46,10 @@ button_pointage::button_pointage(QWidget *parent) :
     ui->lineEdit_14->setValidator(new QRegExpValidator(QRegExp("[A-Za-z_ ]{0,20}"),this));
     ui->lineEdit_18->setValidator(new QIntValidator(0,999));
     ui->lineEdit_20->setValidator(new QIntValidator(0,999));
+
+
+
+
 }
 
 button_pointage::~button_pointage()
@@ -166,7 +181,7 @@ void button_pointage :: pointer(){
     rfid1 = rfid.left(rfid.lastIndexOf(",")) ;
 
     QSqlQuery qry;
-    qry.prepare("select nom,prenom,cin from client where rfid=?" );
+    qry.prepare("select nom,prenom,cin from employe where rfid=?" );
     qry.bindValue(0,rfid1);
     if(qry.exec())
     {

@@ -42,7 +42,7 @@
     <bool>true</bool>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>3</number>
    </property>
    <widget class="QWidget" name="Afficher">
     <property name="autoFillBackground">
@@ -175,6 +175,22 @@
       </property>
      </widget>
     </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>-4</x>
+       <y>-8</y>
+       <width>711</width>
+       <height>411</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+    <zorder>label</zorder>
+    <zorder>pushButton_quit</zorder>
+    <zorder>groupBox_2</zorder>
    </widget>
    <widget class="QWidget" name="Ajouter">
     <property name="autoFillBackground">
@@ -323,6 +339,31 @@
        </rect>
       </property>
      </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>-14</x>
+        <y>-8</y>
+        <width>721</width>
+        <height>411</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <zorder>label_2</zorder>
+     <zorder>label_license</zorder>
+     <zorder>label_2_license</zorder>
+     <zorder>label_3_license</zorder>
+     <zorder>pushButton_Ajouter_license</zorder>
+     <zorder>lineEdit_CIN_license</zorder>
+     <zorder>lineEdit_Nom_license</zorder>
+     <zorder>lineEdit_Pr_license</zorder>
+     <zorder>label_6_license</zorder>
+     <zorder>lineEdit_nl_license</zorder>
+     <zorder>label_14_license</zorder>
+     <zorder>lineEdit_mail_license</zorder>
     </widget>
    </widget>
    <widget class="QWidget" name="tab">
@@ -469,6 +510,31 @@
        <string>Modifier</string>
       </property>
      </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>-14</x>
+        <y>-8</y>
+        <width>751</width>
+        <height>421</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <zorder>label_3</zorder>
+     <zorder>label_2_license_2</zorder>
+     <zorder>label_license_2</zorder>
+     <zorder>label_3_license_2</zorder>
+     <zorder>lineEdit_CIN_license_2</zorder>
+     <zorder>lineEdit_Pr_license_2</zorder>
+     <zorder>lineEdit_Nom_license_2</zorder>
+     <zorder>label_6_license_2</zorder>
+     <zorder>lineEdit_mail_license_2</zorder>
+     <zorder>lineEdit_nl_license_2</zorder>
+     <zorder>label_14_license_2</zorder>
+     <zorder>pushButton_mod_license_2</zorder>
     </widget>
    </widget>
    <widget class="QWidget" name="Email">
@@ -609,6 +675,31 @@
       <string>Parcour...</string>
      </property>
     </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>-4</x>
+       <y>-8</y>
+       <width>721</width>
+       <height>411</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+    <zorder>label_4</zorder>
+    <zorder>label_8</zorder>
+    <zorder>label_9</zorder>
+    <zorder>Attachement</zorder>
+    <zorder>rcpt</zorder>
+    <zorder>subject</zorder>
+    <zorder>file</zorder>
+    <zorder>msg</zorder>
+    <zorder>sendBtn</zorder>
+    <zorder>mail_pass</zorder>
+    <zorder>label_24</zorder>
+    <zorder>browseBtn</zorder>
    </widget>
   </widget>
  </widget>

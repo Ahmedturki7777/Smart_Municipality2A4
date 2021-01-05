@@ -8,6 +8,10 @@ bouton_espace::bouton_espace(QWidget *parent) :
 {
     ui->setupUi(this);
     show_tables();
+    QPixmap pix3("C:/Users/ASUS/Desktop/Mohamed slama/Ressource/ssaa.jpg");
+        int w3 = ui->label_3->width();
+        int h3 = ui->label_3->height();
+        ui->label_3->setPixmap(pix3.scaled(w3,h3,Qt::IgnoreAspectRatio));
 
 }
 

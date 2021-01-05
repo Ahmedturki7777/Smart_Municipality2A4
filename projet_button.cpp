@@ -11,6 +11,19 @@ projet_button::projet_button(QWidget *parent) :
     ui->lineEdit_Nom_projet->setValidator(new QRegExpValidator(QRegExp("[A-Za-z_ ]{0,20}"),this));
     ui->lineEdit_Pr_projet->setValidator(new QRegExpValidator(QRegExp("[A-Za-z_ ]{0,20}"),this));
 
+    QPixmap pix("C:/Users/ASUS/Desktop/Mohamed slama/Ressource/ssaa.jpg");
+        int w = ui->label->width();
+        int h = ui->label->height();
+        ui->label->setPixmap(pix.scaled(w,h,Qt::IgnoreAspectRatio));
+        QPixmap pix2("C:/Users/ASUS/Desktop/Mohamed slama/Ressource/ssaa.jpg");
+            int w2 = ui->label_2->width();
+            int h2 = ui->label_2->height();
+            ui->label_2->setPixmap(pix.scaled(w2,h2,Qt::IgnoreAspectRatio));
+            QPixmap pix3("C:/Users/ASUS/Desktop/Mohamed slama/Ressource/ssaa.jpg");
+                int w3 = ui->label_3->width();
+                int h3 = ui->label_3->height();
+                ui->label_3->setPixmap(pix.scaled(w3,h3,Qt::IgnoreAspectRatio));
+
 }
 
 projet_button::~projet_button()

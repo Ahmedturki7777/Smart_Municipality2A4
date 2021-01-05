@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1068</width>
-    <height>624</height>
+    <width>1057</width>
+    <height>571</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="tab_8">
     <attribute name="title">
@@ -113,7 +113,7 @@
      <property name="geometry">
       <rect>
        <x>280</x>
-       <y>30</y>
+       <y>40</y>
        <width>471</width>
        <height>20</height>
       </rect>
@@ -589,16 +589,30 @@
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>-60</y>
-       <width>1051</width>
-       <height>861</height>
+       <x>-1260</x>
+       <y>0</y>
+       <width>2301</width>
+       <height>681</height>
       </rect>
      </property>
      <property name="text">
       <string/>
      </property>
     </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>-370</x>
+       <y>-40</y>
+       <width>1451</width>
+       <height>761</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <zorder>label_5</zorder>
     <zorder>label_3</zorder>
     <zorder>lineEdit_pc</zorder>
     <zorder>lineEdit_nc</zorder>
@@ -1148,7 +1162,7 @@
        <x>0</x>
        <y>-20</y>
        <width>1061</width>
-       <height>541</height>
+       <height>621</height>
       </rect>
      </property>
      <property name="text">
@@ -1631,6 +1645,31 @@
       <enum>Qt::Horizontal</enum>
      </property>
     </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>-20</y>
+       <width>1061</width>
+       <height>571</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <zorder>label</zorder>
+    <zorder>line_171</zorder>
+    <zorder>line_172</zorder>
+    <zorder>msg_2</zorder>
+    <zorder>rcpt_2</zorder>
+    <zorder>file_2</zorder>
+    <zorder>sendBtn_2</zorder>
+    <zorder>subject_2</zorder>
+    <zorder>line_173</zorder>
+    <zorder>mail_pass_2</zorder>
+    <zorder>browseBtn_2</zorder>
+    <zorder>line_174</zorder>
    </widget>
   </widget>
   <widget class="Line" name="line_175">

@@ -5,7 +5,7 @@
 #include<QSqlQueryModel>
 #include <qdebug.h>
 #include "congee.h"
-#include "QFileDialog"
+
 
 
 
@@ -16,6 +16,20 @@ button_congee::button_congee(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->tableView_3->setModel(gtmp.afficher());
+
+
+    QPixmap pix("C:/Users/ASUS/Desktop/Mohamed slama/Ressource/ssaa.jpg");
+        int w = ui->label_3->width();
+        int h = ui->label_3->height();
+        ui->label_5->setPixmap(pix.scaled(w,h,Qt::IgnoreAspectRatio));
+        QPixmap pix1("C:/Users/ASUS/Desktop/Mohamed slama/Ressource/ssaa.jpg");
+            int w1 = ui->label_4->width();
+            int h1 = ui->label_4->height();
+            ui->label_4->setPixmap(pix.scaled(w1,h1,Qt::IgnoreAspectRatio));
+            QPixmap pix2("C:/Users/ASUS/Desktop/Mohamed slama/Ressource/ssaa.jpg");
+                int w2 = ui->label->width();
+                int h2 = ui->label->height();
+                ui->label->setPixmap(pix.scaled(w2,h2,Qt::IgnoreAspectRatio));
 
     connect(ui->sendBtn_2, SIGNAL(clicked()),this, SLOT(sendMail()));
     connect(ui->browseBtn_2, SIGNAL(clicked()), this, SLOT(browse()));
@@ -182,13 +196,13 @@ void  button_congee::browse()
 }
 void   button_congee::sendMail()
 {
-    Smtp* smtp = new Smtp("mohamed.slama1@esprit.tn",ui->mail_pass_2->text(), "smtp.gmail.com");
+    Smtp* smtp = new Smtp("medslama.1945@gmail.com",ui->mail_pass_2->text(), "smtp.gmail.com");
     connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
 
     if( !files.isEmpty() )
-        smtp->sendMail("mohamed.slama1@esprit.tn", ui->rcpt_2->text() , ui->subject_2->text(),ui->msg_2->toPlainText(), files );
+        smtp->sendMail("medslama.1945@gmail.com", ui->rcpt_2->text() , ui->subject_2->text(),ui->msg_2->toPlainText(), files );
     else
-        smtp->sendMail("mohamed.slama1@esprit.tn", ui->rcpt_2->text() , ui->subject_2->text(),ui->msg_2->toPlainText());
+        smtp->sendMail("medslama.1945@gmail.com", ui->rcpt_2->text() , ui->subject_2->text(),ui->msg_2->toPlainText());
 }
 void   button_congee::mailSent(QString status)
 {

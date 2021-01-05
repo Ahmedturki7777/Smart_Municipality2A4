@@ -11,6 +11,10 @@ bouton_monument::bouton_monument(QWidget *parent) :
 {
     ui->setupUi(this);
     show_tables();
+    QPixmap pix3("C:/Users/ASUS/Desktop/Mohamed slama/Ressource/ssaa.jpg");
+        int w3 = ui->label->width();
+        int h3 = ui->label->height();
+        ui->label->setPixmap(pix3.scaled(w3,h3,Qt::IgnoreAspectRatio));
 }
 
 bouton_monument::~bouton_monument()

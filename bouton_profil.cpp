@@ -8,6 +8,10 @@ bouton_profil::bouton_profil(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->tableView_2->setModel(Etmb.afficher());
+    QPixmap pix3("C:/Users/ASUS/Desktop/Mohamed slama/Ressource/ssaa.jpg");
+        int w3 = ui->label->width();
+        int h3 = ui->label->height();
+        ui->label->setPixmap(pix3.scaled(w3,h3,Qt::IgnoreAspectRatio));
 
 }
 

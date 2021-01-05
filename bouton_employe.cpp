@@ -15,6 +15,10 @@ bouton_employe::bouton_employe(QWidget *parent) :
     ui->modifier_cin->setValidator(new QIntValidator(0,99999));
     ui->lineEdit_rcin->setValidator(new QIntValidator(0,99999));
     ui->lineEdit_rcin_2->setValidator(new QIntValidator(0,99999));
+    QPixmap pix3("C:/Users/ASUS/Desktop/Mohamed slama/Ressource/ssaa.jpg");
+        int w3 = ui->label_11->width();
+        int h3 = ui->label_11->height();
+        ui->label_11->setPixmap(pix3.scaled(w3,h3,Qt::IgnoreAspectRatio));
 }
 
 bouton_employe::~bouton_employe()
