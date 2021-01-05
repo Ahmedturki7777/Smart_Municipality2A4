@@ -25,6 +25,23 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    QPixmap pix("C:/Users/ASUS/Desktop/Mohamed slama/Ressource/ssaa.jpg");
+        int w = ui->label->width();
+        int h = ui->label->height();
+        ui->label->setPixmap(pix.scaled(w,h,Qt::IgnoreAspectRatio));
+
+
+        ui->pushButton->setStyleSheet("border-image: url(C:/Users/ASUS/Desktop/Mohamed slama/Ressource/button_init.png)3 10 3 10; font: 10pt Bahnschrift;");
+        ui->pushButton_9->setStyleSheet("border-image: url(C:/Users/ASUS/Desktop/Mohamed slama/Ressource/button_init.png)3 10 3 10; font: 10pt Bahnschrift;");
+        ui->pushButton_8->setStyleSheet("border-image: url(C:/Users/ASUS/Desktop/Mohamed slama/Ressource/button_init.png)3 10 3 10; font: 10pt Bahnschrift;");
+        ui->pushButton_2->setStyleSheet("border-image: url(C:/Users/ASUS/Desktop/Mohamed slama/Ressource/button_init.png)3 10 3 10; font: 10pt Bahnschrift;");
+        ui->pushButton_3->setStyleSheet("border-image: url(C:/Users/ASUS/Desktop/Mohamed slama/Ressource/button_init.png)3 10 3 10; font: 10pt Bahnschrift;");
+        ui->pushButton_5->setStyleSheet("border-image: url(C:/Users/ASUS/Desktop/Mohamed slama/Ressource/button_init.png)3 10 3 10; font: 10pt Bahnschrift;");
+        ui->pushButton_6->setStyleSheet("border-image: url(C:/Users/ASUS/Desktop/Mohamed slama/Ressource/button_init.png)3 10 3 10; font: 10pt Bahnschrift;");
+        ui->pushButton_10->setStyleSheet("border-image: url(C:/Users/ASUS/Desktop/Mohamed slama/Ressource/button_init.png)3 10 3 10; font: 10pt Bahnschrift;");
+        ui->pushButton_license->setStyleSheet("border-image: url(C:/Users/ASUS/Desktop/Mohamed slama/Ressource/button_init.png)3 10 3 10; font: 10pt Bahnschrift;");
+        ui->pushButton_evenement->setStyleSheet("border-image: url(C:/Users/ASUS/Desktop/Mohamed slama/Ressource/button_init.png)3 10 3 10; font: 10pt Bahnschrift;");
+
 
 }
 

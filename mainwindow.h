@@ -51,8 +51,11 @@ private slots:
 
     void on_pushButton_9_clicked();
 
+    void update_label();
+
 private:
     Ui::MainWindow *ui;
+
 
 };
 #endif // MAINWINDOW_H
