@@ -165,7 +165,7 @@
      <bool>true</bool>
     </property>
     <attribute name="title">
-     <string>Ajouter/Modifier</string>
+     <string>Ajouter</string>
     </attribute>
     <widget class="QGroupBox" name="groupBox_projet">
      <property name="geometry">
@@ -221,8 +221,8 @@
      <widget class="QPushButton" name="pushButton_Ajouter_projet">
       <property name="geometry">
        <rect>
-        <x>120</x>
-        <y>170</y>
+        <x>230</x>
+        <y>200</y>
         <width>211</width>
         <height>81</height>
        </rect>
@@ -307,11 +307,144 @@
        </rect>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_mod_projet">
+    </widget>
+   </widget>
+   <widget class="QWidget" name="Modifier">
+    <attribute name="title">
+     <string>Modifier</string>
+    </attribute>
+    <widget class="QGroupBox" name="groupBox_projet_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>691</width>
+       <height>411</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Modifier</string>
+     </property>
+     <widget class="QLabel" name="label_projet_9">
       <property name="geometry">
        <rect>
-        <x>420</x>
-        <y>170</y>
+        <x>30</x>
+        <y>30</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>CIN</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_projet_10">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>80</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Nom</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_projet_11">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>130</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Prenom</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CIN_projet_2">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>30</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Nom_projet_2">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>80</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Pr_projet_2">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>130</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_projet_12">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>30</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Nom du licenses:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_nl_projet_2">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>30</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_projet_13">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>90</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>E-mail:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_mail_projet_2">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>90</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_mod_projet_2">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>200</y>
         <width>211</width>
         <height>81</height>
        </rect>

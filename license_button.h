@@ -23,7 +23,6 @@ private slots:
 
     void on_pushButton_Ajouter_license_clicked();
 
-    void on_pushButton_mod_license_clicked();
 
     void on_pushButton_sup_clicked();
 
@@ -35,6 +34,8 @@ private slots:
     void on_pushButton_quit_clicked();
 
     void on_export_excel_clicked();
+
+    void on_pushButton_mod_license_2_clicked();
 
 private:
     Ui::license_button *ui;

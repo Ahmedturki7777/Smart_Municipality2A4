@@ -50,34 +50,7 @@ void license_button::on_pushButton_Ajouter_license_clicked()
                                 "Click Cancel to exit."), QMessageBox::Cancel);
 }
 
-void license_button::on_pushButton_mod_license_clicked()
-{
-    QString cin = ui->lineEdit_CIN_license->text();
-    QString nom= ui->lineEdit_Nom_license->text();
-    QString prenom= ui->lineEdit_Pr_license->text();
-    QString nomlicense= ui->lineEdit_nl_license->text();
-    QString email= ui->lineEdit_mail_license->text();
 
-    license e;
-    bool test=e.modifier(nom,prenom,nomlicense,email,cin);
-    foreach(QLineEdit* le, findChildren<QLineEdit*>()) {
-       le->clear();
-    }
-    if(test)
-    {
-        ui->tableView_license->setModel(e.afficher());
-
-        QMessageBox::information(nullptr, QObject::tr("Modification effectue"),
-                    QObject::tr("OK.\n"
-                                "Click Cancel to exit."), QMessageBox::Cancel);
-
-}
-    else
-        QMessageBox::critical(nullptr, QObject::tr("Modification non effectue"),
-                    QObject::tr("KO.\n"
-                                "Click Cancel to exit."), QMessageBox::Cancel);
-
-}
 
 void license_button::on_pushButton_sup_clicked()
 {
@@ -207,4 +180,32 @@ void license_button::on_export_excel_clicked()
                                  QString(tr("%1 records exported!")).arg(retVal)
                                  );
     }
+}
+
+void license_button::on_pushButton_mod_license_2_clicked()
+{
+    QString cin = ui->lineEdit_CIN_license_2->text();
+    QString nom= ui->lineEdit_Nom_license_2->text();
+    QString prenom= ui->lineEdit_Pr_license_2->text();
+    QString nomlicense= ui->lineEdit_nl_license_2->text();
+    QString email= ui->lineEdit_mail_license_2->text();
+
+    license e;
+    bool test=e.modifier(nom,prenom,nomlicense,email,cin);
+    foreach(QLineEdit* le, findChildren<QLineEdit*>()) {
+       le->clear();
+    }
+    if(test)
+    {
+        ui->tableView_license->setModel(e.afficher());
+
+        QMessageBox::information(nullptr, QObject::tr("Modification effectue"),
+                    QObject::tr("OK.\n"
+                                "Click Cancel to exit."), QMessageBox::Cancel);
+
+}
+    else
+        QMessageBox::critical(nullptr, QObject::tr("Modification non effectue"),
+                    QObject::tr("KO.\n"
+                                "Click Cancel to exit."), QMessageBox::Cancel);
 }

@@ -42,7 +42,7 @@
     <bool>true</bool>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="Afficher">
     <property name="autoFillBackground">
@@ -181,7 +181,7 @@
      <bool>true</bool>
     </property>
     <attribute name="title">
-     <string>Ajouter/Modifier</string>
+     <string>Ajouter</string>
     </attribute>
     <widget class="QGroupBox" name="groupBox">
      <property name="geometry">
@@ -237,8 +237,8 @@
      <widget class="QPushButton" name="pushButton_Ajouter_license">
       <property name="geometry">
        <rect>
-        <x>120</x>
-        <y>170</y>
+        <x>240</x>
+        <y>210</y>
         <width>211</width>
         <height>81</height>
        </rect>
@@ -323,11 +323,144 @@
        </rect>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_mod_license">
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>Modifier</string>
+    </attribute>
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>691</width>
+       <height>391</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Modifier</string>
+     </property>
+     <widget class="QLabel" name="label_2_license_2">
       <property name="geometry">
        <rect>
-        <x>420</x>
-        <y>170</y>
+        <x>30</x>
+        <y>90</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Nom</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_license_2">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>40</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>CIN</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3_license_2">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>140</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Prenom</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CIN_license_2">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>40</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Pr_license_2">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>140</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Nom_license_2">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>90</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6_license_2">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>40</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Nom du licenses:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_mail_license_2">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>100</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_nl_license_2">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>40</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14_license_2">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>100</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>E-mail:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_mod_license_2">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>200</y>
         <width>211</width>
         <height>81</height>
        </rect>

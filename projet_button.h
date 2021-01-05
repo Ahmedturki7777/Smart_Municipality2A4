@@ -19,13 +19,13 @@ private slots:
 
     void on_pushButton_Ajouter_projet_clicked();
 
-    void on_pushButton_mod_projet_clicked();
-
     void on_pushButton_sup_projet_clicked();
 
     void on_pushButton_rec_projet_clicked();
 
     void on_pushButton_quit_projet_clicked();
+
+    void on_pushButton_mod_projet_2_clicked();
 
 private:
     Ui::projet_button *ui;

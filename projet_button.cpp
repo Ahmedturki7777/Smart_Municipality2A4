@@ -50,36 +50,6 @@ void projet_button::on_pushButton_Ajouter_projet_clicked()
 
 }
 
-void projet_button::on_pushButton_mod_projet_clicked()
-{
-    QString cin = ui->lineEdit_CIN_projet->text();
-    QString nom= ui->lineEdit_Nom_projet->text();
-    QString prenom= ui->lineEdit_Pr_projet->text();
-    QString nomlicense= ui->lineEdit_nl_projet->text();
-    QString email= ui->lineEdit_mail_projet->text();
-
-    Projet p;
-    bool test=p.modifier(nom,prenom,nomlicense,email,cin);
-    foreach(QLineEdit* le, findChildren<QLineEdit*>()) {
-       le->clear();
-    }
-    if(test)
-    {
-        ui->tableView_projet->setModel(p.afficher());
-
-        QMessageBox::information(nullptr, QObject::tr("Modification effectue"),
-                    QObject::tr("OK.\n"
-                                "Click Cancel to exit."), QMessageBox::Cancel);
-
-}
-    else
-        QMessageBox::critical(nullptr, QObject::tr("Modification non effectue"),
-                    QObject::tr("KO.\n"
-                                "Click Cancel to exit."), QMessageBox::Cancel);
-
-
-}
-
 void projet_button::on_pushButton_sup_projet_clicked()
 {
     QString cin= ui->lineEdit_CINsup_projet->text();
@@ -140,4 +110,34 @@ void projet_button::on_pushButton_rec_projet_clicked()
 void projet_button::on_pushButton_quit_projet_clicked()
 {
     close();
+}
+
+void projet_button::on_pushButton_mod_projet_2_clicked()
+{
+    QString cin = ui->lineEdit_CIN_projet_2->text();
+    QString nom= ui->lineEdit_Nom_projet_2->text();
+    QString prenom= ui->lineEdit_Pr_projet_2->text();
+    QString nomlicense= ui->lineEdit_nl_projet_2->text();
+    QString email= ui->lineEdit_mail_projet_2->text();
+
+    Projet p;
+    bool test=p.modifier(nom,prenom,nomlicense,email,cin);
+    foreach(QLineEdit* le, findChildren<QLineEdit*>()) {
+       le->clear();
+    }
+    if(test)
+    {
+        ui->tableView_projet->setModel(p.afficher());
+
+        QMessageBox::information(nullptr, QObject::tr("Modification effectue"),
+                    QObject::tr("OK.\n"
+                                "Click Cancel to exit."), QMessageBox::Cancel);
+
+}
+    else
+        QMessageBox::critical(nullptr, QObject::tr("Modification non effectue"),
+                    QObject::tr("KO.\n"
+                                "Click Cancel to exit."), QMessageBox::Cancel);
+
+
 }
