@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>ressource/apple watch hermes 1300 dollar.png</file>
+        <file>ressource/bentley 4 millions dollar . 1932.png</file>
+        <file>ressource/steve jobs.png</file>
+        <file>ressource/téléchargement (1).jpg</file>
+        <file>ressource/téléchargement.jpg</file>
+    </qresource>
+</RCC>
