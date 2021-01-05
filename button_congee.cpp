@@ -9,18 +9,34 @@
 
 
 
+
 button_congee::button_congee(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::button_congee)
 {
     ui->setupUi(this);
+    ui->tableView_3->setModel(gtmp.afficher());
+
+    connect(ui->sendBtn_2, SIGNAL(clicked()),this, SLOT(sendMail()));
+    connect(ui->browseBtn_2, SIGNAL(clicked()), this, SLOT(browse()));
+    ui->lineEdit_nc ->setValidator(new QRegExpValidator(QRegExp("[A-Za-z_ ]{0,20}"),this));
+    ui->lineEdit_idc->setValidator(new QIntValidator(0,999));
+    ui->lineEdit_pc->setValidator(new QRegExpValidator(QRegExp("[A-Za-z_ ]{0,20}"),this));
+    ui->lineEdit_vc->setValidator(new QRegExpValidator(QRegExp("[A-Za-z_ ]{0,20}"),this));
+    ui->lineEdit_nbc->setValidator(new QIntValidator(0,999));
+    ui->lineEdit_nm ->setValidator(new QRegExpValidator(QRegExp("[A-Za-z_ ]{0,20}"),this));
+    ui->lineEdit_idm->setValidator(new QIntValidator(0,999));
+    ui->lineEdit_pm->setValidator(new QRegExpValidator(QRegExp("[A-Za-z_ ]{0,20}"),this));
+    ui->lineEdit_vm->setValidator(new QRegExpValidator(QRegExp("[A-Za-z_ ]{0,20}"),this));
+    ui->lineEdit_nbm->setValidator(new QIntValidator(0,999));
+    ui->lineEdit_idmc->setValidator(new QIntValidator(0,999));
 }
 
 button_congee::~button_congee()
 {
     delete ui;
 }
-void button_congee::on_pushButton_4_clicked()
+void button_congee::on_pushButton_7_clicked()
 {
 
     QString nom=ui->lineEdit_nc->text();
@@ -45,7 +61,7 @@ void button_congee::on_pushButton_4_clicked()
                     QObject::tr("erreur d'ajout.\n"
                                 "Click Cancel to exit."), QMessageBox::Cancel);
 }
-void button_congee::on_pushButton_5_clicked()
+void button_congee::on_pushButton_8_clicked()
 {
     QString nom=ui->lineEdit_nm->text();
     QString prenom=ui->lineEdit_pm->text();
@@ -63,11 +79,6 @@ void button_congee::on_pushButton_5_clicked()
         ui->tableView_3->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
         msBox.setText("modification reussite");
         msBox.exec();
-        ui->lineEdit_idm->clear();
-        ui->lineEdit_nm->clear();
-        ui->lineEdit_pm->clear();
-        ui->lineEdit_vm->clear();
-        ui->lineEdit_nbm->clear();
     }
     else
     {
@@ -81,7 +92,7 @@ void button_congee::on_pushButton_5_clicked()
 
 }
 
-void button_congee::on_pushButton_6_clicked()
+void button_congee::on_pushButton_9_clicked()
 {
     int id=ui->lineEdit_idm->text().toInt() ;
     bool test=gtmp.supprimer(id) ;
@@ -100,7 +111,7 @@ void button_congee::on_pushButton_6_clicked()
 
 }
 
-void button_congee::on_pushButton_12_clicked()
+void button_congee::on_pushButton_17_clicked()
 {
     QMessageBox msgBox ;
         QSqlQueryModel *model = new QSqlQueryModel();
@@ -124,10 +135,10 @@ void button_congee::on_pushButton_12_clicked()
         {
             while(qry.next())
             {
-                ui->lineEdit_idm->setText(qry.value(0).toString());
-                 ui->lineEdit_nc->setText(qry.value(1).toString());
-                ui->lineEdit_pc->setText(qry.value(2).toString());
-               ui->lineEdit_vc->setText(qry.value(3).toString());
+               ui->lineEdit_idm->setText(qry.value(0).toString());
+               ui->lineEdit_nm->setText(qry.value(1).toString());
+               ui->lineEdit_pm->setText(qry.value(2).toString());
+               ui->lineEdit_vm->setText(qry.value(3).toString());
                ui->lineEdit_nbm->setText(qry.value(4).toString());
 
 
