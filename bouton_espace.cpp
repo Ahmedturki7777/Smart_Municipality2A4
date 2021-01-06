@@ -6,7 +6,6 @@
 #include <QSerialPortInfo>
 #include <QDebug>
 #include <QtWidgets>
-#include "ui_dialog.h"
 #include "rgb.h"
 #include "ui_rgb.h"
 
