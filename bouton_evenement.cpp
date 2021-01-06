@@ -9,10 +9,12 @@ bouton_evenement::bouton_evenement(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::bouton_evenement)
 {
+    check=false ;
     ui->setupUi(this);
      ui->tableView_2->setModel(E.afficher());
      ui->tableView_3->setModel((E.afficher()));
     ui->tableView_4->setModel((E.afficher()));
+    ui->label_arduino->setText("empty");
     QPixmap pix3("C:/Users/ASUS/Desktop/Mohamed slama/Ressource/ssaa.jpg");
         int w3 = ui->label->width();
         int h3 = ui->label->height();
