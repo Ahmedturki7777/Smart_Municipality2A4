@@ -15,6 +15,8 @@ bouton_evenement::bouton_evenement(QWidget *parent) :
      ui->tableView_3->setModel((E.afficher()));
     ui->tableView_4->setModel((E.afficher()));
     ui->label_arduino->setText("empty");
+     ui->lineEdit_nomev->setValidator(new QRegExpValidator(QRegExp("[A-Za-z_ ]{0,20}"),this));
+      ui->lineEdit_sujetev->setValidator(new QRegExpValidator(QRegExp("[A-Za-z_ ]{0,20}"),this));
     QPixmap pix3("C:/Users/ASUS/Desktop/Mohamed slama/Ressource/ssaa.jpg");
         int w3 = ui->label->width();
         int h3 = ui->label->height();
