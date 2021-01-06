@@ -21,7 +21,6 @@ SOURCES += \
     button_pointage.cpp \
     conexion.cpp \
     congee.cpp \
-    dialog.cpp \
     education.cpp \
     employe.cpp \
     envoi_mail.cpp \
@@ -40,7 +39,8 @@ SOURCES += \
     projet.cpp \
     projet_button.cpp \
     reclamation.cpp \
-    rfid.cpp
+    rfid.cpp \
+    rgb.cpp
 
 HEADERS += \
     amenagement.h \
@@ -55,7 +55,6 @@ HEADERS += \
     button_pointage.h \
     conexion.h \
     congee.h \
-    dialog.h \
     education.h \
     employe.h \
     envoi_mail.h \
@@ -73,7 +72,8 @@ HEADERS += \
     projet.h \
     projet_button.h \
     reclamation.h \
-    rfid.h
+    rfid.h \
+    rgb.h
 
 FORMS += \
     amenagement.ui \
@@ -85,13 +85,13 @@ FORMS += \
     bouton_reclamation.ui \
     button_congee.ui \
     button_pointage.ui \
-    dialog.ui \
     education.ui \
     estimation.ui \
     fenetre2.ui \
     license_button.ui \
     mainwindow.ui \
-    projet_button.ui
+    projet_button.ui \
+    rgb.ui
 
 TRANSLATIONS += \
     municplaity_integrationn_fr_FR.ts

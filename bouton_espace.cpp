@@ -7,7 +7,9 @@
 #include <QDebug>
 #include <QtWidgets>
 #include "ui_dialog.h"
-#include "dialog.h"
+#include "rgb.h"
+#include "ui_rgb.h"
+
 bouton_espace::bouton_espace(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::bouton_espace)
@@ -15,6 +17,8 @@ bouton_espace::bouton_espace(QWidget *parent) :
     ui->setupUi(this);
     show_tables();
     check=false ;
+    ui->lineEdit_nom->setValidator(new QRegExpValidator(QRegExp("[A-Za-z_ ]{0,20}"),this));
+    ui->lineEdit_adresse->setValidator(new QRegExpValidator(QRegExp("[A-Za-z_ ]{0,20}"),this));
     QPixmap pix3("C:/Users/ASUS/Desktop/Mohamed slama/Ressource/ssaa.jpg");
     ui->label_arduino->setText("empty");
         int w3 = ui->label_3->width();
@@ -139,7 +143,7 @@ void bouton_espace::on_supprimer_clicked()
 
 void bouton_espace::on_pushButton_clicked()
 {
-    dialog x;
-    x.exec();
 
+     rgb r ;
+     r.exec() ;
 }
