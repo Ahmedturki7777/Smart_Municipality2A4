@@ -6,7 +6,7 @@
 #include <QStandardItemModel>
 
 #include <QDialog>
-
+#include "arduino.h"
 namespace Ui {
 class bouton_espace;
 }
@@ -41,11 +41,18 @@ private slots:
     void on_tableau_clicked(const QModelIndex &index);
 
     void on_supprimer_clicked();
+    void update_label();
+
+    void on_pushButton_clicked();
 
 private:
     Ui::bouton_espace *ui;
     QString selected;
     int selectedm;
+    arduino A;
+     bool check;
+     QByteArray data;
+
 };
 
 #endif // BOUTON_ESPACE_H

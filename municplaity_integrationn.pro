@@ -21,6 +21,7 @@ SOURCES += \
     button_pointage.cpp \
     conexion.cpp \
     congee.cpp \
+    dialog.cpp \
     education.cpp \
     employe.cpp \
     envoi_mail.cpp \
@@ -54,6 +55,7 @@ HEADERS += \
     button_pointage.h \
     conexion.h \
     congee.h \
+    dialog.h \
     education.h \
     employe.h \
     envoi_mail.h \
@@ -83,6 +85,7 @@ FORMS += \
     bouton_reclamation.ui \
     button_congee.ui \
     button_pointage.ui \
+    dialog.ui \
     education.ui \
     estimation.ui \
     fenetre2.ui \

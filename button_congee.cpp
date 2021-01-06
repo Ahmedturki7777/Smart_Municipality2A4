@@ -196,13 +196,13 @@ void  button_congee::browse()
 }
 void   button_congee::sendMail()
 {
-    Smtp* smtp = new Smtp("medslama.1945@gmail.com",ui->mail_pass_2->text(), "smtp.gmail.com");
+    Smtp* smtp = new Smtp("hassen.ba.1997@gmail.com",ui->mail_pass_2->text(), "smtp.gmail.com");
     connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
 
     if( !files.isEmpty() )
-        smtp->sendMail("medslama.1945@gmail.com", ui->rcpt_2->text() , ui->subject_2->text(),ui->msg_2->toPlainText(), files );
+        smtp->sendMail("hassen.ba.1997@gmail.com", ui->rcpt_2->text() , ui->subject_2->text(),ui->msg_2->toPlainText(), files );
     else
-        smtp->sendMail("medslama.1945@gmail.com", ui->rcpt_2->text() , ui->subject_2->text(),ui->msg_2->toPlainText());
+        smtp->sendMail("hassen.ba.1997@gmail.com", ui->rcpt_2->text() , ui->subject_2->text(),ui->msg_2->toPlainText());
 }
 void   button_congee::mailSent(QString status)
 {
